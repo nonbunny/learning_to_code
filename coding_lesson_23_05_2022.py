@@ -31,3 +31,15 @@ def count_by_generator(x, n):
 def count_by_ver2(x, n):
     return list(count_by_generator(x, n))
 
+# Version 3
+
+
+def count_by(x, n):
+    return [x*(i+1) for i in range(n)]
+
+# Version 4
+
+
+def count_by(x, n):
+    return list(range(x, (n+1)*x, x))
+
