@@ -12,9 +12,22 @@ count_by(2,5) #should return [2,4,6,8,10]
 """
 
 
-def count_by(x, n):
+# Version 1
+
+def count_by_ver1(x, n):
     final_array = []
     for i in range(n):
         final_array.append(x*(i+1))
     return final_array
+
+# Version 2
+
+
+def count_by_generator(x, n):
+    for i in range(n):
+        yield x * (i + 1)
+
+
+def count_by_ver2(x, n):
+    return list(count_by_generator(x, n))
 
